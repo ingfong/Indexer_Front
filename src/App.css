@@ -22,6 +22,10 @@
 /*    color: white;*/
     height: 80px;
 }
+
+.Google{
+    font-family: Courier, monospace;
+}
 .Magnify {
     height: 20px;
     width: 20px;

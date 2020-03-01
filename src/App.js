@@ -6,10 +6,6 @@ import Button from 'react-bootstrap/Button'
 import InputGroup from 'react-bootstrap/InputGroup'
 import Card from 'react-bootstrap/Card'
 import axios from "axios"
-const querystring = require('querystring');
-
-
-
 
 
 class App extends Component {
@@ -27,6 +23,7 @@ class App extends Component {
         var self = this;
         axios.get("http://127.0.0.1:5000/" + this.state.query).then(function(response){
                                                                     self.setState({responses: response['data'][self.state.query]})
+                                                                    console.log(response)
                                                                     })
     }
     createList = () => {
@@ -71,7 +68,16 @@ render(){
   return (
           <div>
             <div className = "Rooms-header">
-                <img src={ require('./Google.png') } style = {{height: 60}} />
+          {
+          
+//          <img src={ require('./Google.png') } style = {{height: 60}} />
+          }
+          <h1 className = "Google" style = {{color: 'blue', paddingLeft: 10}}>K</h1>
+          <h1 className = "Google" style = {{color: 'red'}}>r</h1>
+          <h1 className = "Google" style = {{color: 'orange'}}>i</h1>
+          <h1 className = "Google" style = {{color: 'blue'}}>s</h1>
+          <h1 className = "Google" style = {{color: 'green'}}>h</h1>
+          <h1 className = "Google" style = {{color: 'brown', paddingRight: 10}}></h1>
           
           <input className = "Search" placeholder ="Search" value = {this.state.query}  onChange={event => this.handleChange(event, 'query')}
 />
